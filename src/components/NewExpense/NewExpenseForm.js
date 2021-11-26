@@ -6,6 +6,8 @@ const NewExpenseForm = (props) => {
 	const [enteredDate, setEnteredDate] = useState("");
 	const [enteredAmount, setEnteredAmount] = useState("");
 
+	const { onSaveExpenseData } = props;
+
 	const titleChangeHandler = (event) => {
 		setEnteredTitle(event.target.value);
 	};
@@ -25,7 +27,7 @@ const NewExpenseForm = (props) => {
 			date: new Date(enteredDate),
 			amount: enteredAmount,
 		};
-		console.log(expenseData);
+		onSaveExpenseData(expenseData);
 		setEnteredTitle("");
 		setEnteredDate("");
 		setEnteredAmount("");
