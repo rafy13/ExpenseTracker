@@ -1,11 +1,19 @@
+import "./ExpenseItem.css";
+
 function ExpenseItem() {
-  return (<div>
-      <div>March 2nd 1995</div>
-      <div>
-          <h2>Insurance</h2>
-          <div>1000.00</div>
-      </div>
-  </div>);
+	const date = new Date();
+	const expenseTitle = "Insurance";
+	const expenseAmount = "1000.00";
+
+	return (
+		<div className="expense-item">
+			<div>{date.toDateString()}</div>
+			<div className="expense-item__description">
+				<h2>{expenseTitle}</h2>
+				<div className="expense-item__price">${expenseTitle}</div>
+			</div>
+		</div>
+	);
 }
 
 export default ExpenseItem;
