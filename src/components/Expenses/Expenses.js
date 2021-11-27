@@ -19,12 +19,13 @@ const Expenses = (props) => {
 					selected={filteredYear}
 					onChangeFilter={filterChangeHandler}
 				/>
-				{props.items.map((item) => {
+				{props.items.map((expense) => {
 					return (
 						<ExpenseItem
-							title={item.title}
-							amount={item.amount}
-							date={item.date}
+							key={expense.id}
+							title={expense.title}
+							amount={expense.amount}
+							date={expense.date}
 						></ExpenseItem>
 					);
 				})}
