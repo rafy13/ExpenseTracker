@@ -1,0 +1,26 @@
+.expenses-filter {
+	align-items: center;
+	width: 100%;
+}
+
+.expenses-filter__control {
+	text-align: right;
+	width: 100%;
+	display: flex;
+}
+
+.expenses-filter__control select {
+	padding: 0.2rem;
+	border-radius: 6px;
+	height: 2rem;
+	width: 10rem;
+}
+
+.expenses-filter__control label {
+	margin-bottom: 0.5rem;
+	display: block;
+	color: white;
+	width: 90%;
+	display: inline;
+	text-align: left;
+}
